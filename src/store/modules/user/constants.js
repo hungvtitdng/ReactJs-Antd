@@ -1,0 +1,10 @@
+export const GET_LIST_REQUEST = 'user/GET_LIST_REQUEST'
+export const GET_LIST_SUCCESS = 'user/GET_LIST_SUCCESS'
+
+export const GET_DETAIL_REQUEST = 'user/GET_DETAIL_REQUEST'
+export const GET_DETAIL_SUCCESS = 'user/GET_DETAIL_SUCCESS'
+
+export const UPDATE_REQUEST = 'user/UPDATE_REQUEST'
+export const UPDATE_SUCCESS = 'user/UPDATE_SUCCESS'
+
+export const HANDLE_ERROR = 'user/HANDLE_ERROR'
