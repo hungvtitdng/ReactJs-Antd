@@ -1,29 +1,27 @@
 import React, { memo } from 'react'
+import { connect } from 'react-redux'
 import { Redirect, Route } from 'react-router-dom'
-import PropTypes from 'prop-types'
+import { createStructuredSelector } from 'reselect'
 import { hasAuth } from './permission'
+import { user } from '../store/modules/auth/selectors'
 
-const RestrictedRoute = ({ component: Component, ...rest }) => {
-  const userInfo = true
+const RestrictedRoute = ({ userInfo, component: Component, ...rest }) => (
+  <Route
+    {...rest}
+    render={(props) => (
+      hasAuth(userInfo) ? (
+        <Redirect to={{
+          pathname: '/',
+          state: { from: props.location },
+        }}
+        />
+      ) : <Route {...rest} render={() => <Component />} />
+    )}
+  />
+)
 
-  return (
-    <Route
-      {...rest}
-      render={(props) => (
-        hasAuth(userInfo) ? (
-          <Redirect to={{
-            pathname: '/dashboard',
-            state: { from: props.location },
-          }}
-          />
-        ) : <Route {...rest} render={() => <Component />} />
-      )}
-    />
-  )
-}
+const mapStateToProps = createStructuredSelector({
+  userInfo: user(),
+})
 
-RestrictedRoute.propTypes = {
-  location: PropTypes.object,
-}
-
-export default memo(RestrictedRoute)
+export default memo(connect(mapStateToProps)(RestrictedRoute))

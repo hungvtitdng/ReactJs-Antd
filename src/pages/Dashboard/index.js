@@ -5,23 +5,6 @@ const DashboardPage = () => (
   <>
     <TitleApp name="Dashboard page" />
     <h1>Dashboard</h1>
-    <h1>Dashboard</h1>
-    <h1>Dashboard</h1>
-    <h1>Dashboard</h1>
-    <h1>Dashboard</h1>
-    <h1>Dashboard</h1>
-    <h1>Dashboard</h1>
-    <h1>Dashboard</h1>
-    <h1>Dashboard</h1>
-    <h1>Dashboard</h1>
-    <h1>Dashboard</h1>
-    <h1>Dashboard</h1>
-    <h1>Dashboard</h1>
-    <h1>Dashboard</h1>
-    <h1>Dashboard</h1>
-    <h1>Dashboard</h1>
-    <h1>Dashboard</h1>
-    <h1>Dashboard</h1>
   </>
 )
 

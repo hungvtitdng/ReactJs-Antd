@@ -17,8 +17,8 @@ i18n
         translation: en,
       },
     },
-    lng: 'vi',
-    fallbackLng: 'vi', // use en if detected lng is not available
+    lng: 'en',
+    fallbackLng: 'en', // use en if detected lng is not available
     debug: true,
 
     interpolation: {

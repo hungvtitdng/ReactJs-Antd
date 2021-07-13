@@ -3,13 +3,13 @@ import { Result, Button } from 'antd'
 import { Link } from 'react-router-dom'
 import { trans } from '../../i18n'
 
-const NotFoundPage = () => (
+const UnauthorizedPage = () => (
   <Result
-    status="404"
-    title="404"
-    subTitle={trans('message_404')}
+    status="403"
+    title="403"
+    subTitle="403 Unauthorized"
     extra={<Link to="/"><Button type="primary">{trans('back_home')}</Button></Link>}
   />
 )
 
-export default NotFoundPage
+export default UnauthorizedPage

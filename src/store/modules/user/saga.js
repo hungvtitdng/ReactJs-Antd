@@ -1,11 +1,7 @@
 import { call, put, takeEvery } from 'redux-saga/effects'
-import * as CONST from './constants'
+import { GET_LIST_REQUEST } from './constants'
 import { list } from '../../../api/user'
-import {
-  getListSuccessAction,
-
-  handleErrorAction,
-} from './actions'
+import { getListSuccessAction, handleErrorAction } from './actions'
 
 export function* getListSaGa(payload) {
   try {
@@ -20,6 +16,6 @@ export function* getListSaGa(payload) {
 /**
  * Root saga manages watcher lifecycle
  */
-export default function* carData() {
-  yield takeEvery(CONST.GET_LIST_REQUEST, getListSaGa)
+export default function* userData() {
+  yield takeEvery(GET_LIST_REQUEST, getListSaGa)
 }

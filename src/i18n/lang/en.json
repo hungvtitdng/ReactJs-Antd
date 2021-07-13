@@ -1,6 +1,6 @@
 {
   "login": "Login",
   "register": "Register",
-  "sorry_page_you_visited_does_not_exist": "Sorry, the page you visited does not exist.",
+  "message_404": "Sorry, the page you visited does not exist.",
   "back_home": "Back Home"
 }

@@ -1,33 +1,52 @@
-import PrivateRoute from './PrivateRoute'
-import RestrictedRoute from './RestrictedRoute'
 import PageNotFound from '../pages/Error/NotFound'
+import GuestLayout from '../components/Layout/GuestLayout'
+import MainLayout from '../components/Layout/MainLayout'
 
 /**
  * Get List Route Modules.
  *
  * @returns {[]}
  */
-const modulesRoute = () => {
-  const requireModule = require.context('./modules', true, /\.js$/)
-  const modules = []
+const publicRoutes = require.context('./public', true, /\.js$/)
+const privateRoutes = require.context('./private', true, /\.js$/)
 
-  requireModule.keys().forEach((fileName) => {
-    const module = requireModule(fileName).default
-    modules.push(...module)
+const parseModules = (context) => {
+  const routes = []
+  const paths = []
+
+  context.keys().forEach((fileName) => {
+    const object = context(fileName).default
+    routes.push(...object)
+    paths.push(...object.map((o) => o.path))
   })
 
-  return modules
-}
-
-export {
-  PrivateRoute,
-  RestrictedRoute,
+  return {
+    routes,
+    paths,
+  }
 }
 
 const routes = [
-  ...modulesRoute(),
-  { path: '/404', exact: true, component: PageNotFound },
-  { path: '*', component: PageNotFound },
+  {
+    path: parseModules(publicRoutes).paths,
+    exact: true,
+    requiredAuth: false,
+    restricted: true,
+    component: GuestLayout,
+    routes: parseModules(publicRoutes).routes,
+  },
+  {
+    path: parseModules(privateRoutes).paths,
+    exact: true,
+    requiredAuth: true,
+    restricted: false,
+    component: MainLayout,
+    routes: parseModules(privateRoutes).routes,
+  },
+  {
+    path: '*',
+    component: PageNotFound,
+  },
 ]
 
 export default routes
