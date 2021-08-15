@@ -9,12 +9,6 @@ export const loading = () =>
     (state) => state.loading,
   )
 
-export const error = () =>
-  createSelector(
-    selectUser,
-    (state) => state.error,
-  )
-
 export const list = () =>
   createSelector(
     selectUser,

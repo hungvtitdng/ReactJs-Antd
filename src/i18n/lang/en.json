@@ -1,6 +1,54 @@
 {
+  "profile": "Profile",
+  "change-password": "Change password",
+  "dashboard": "Dashboard",
+  "accounts": "Accounts",
+  "create": "Create",
+  "edit": "Edit",
+  "delete": "Delete",
+  "user-list": "User list",
   "login": "Login",
+  "back-to-login": "Back to login",
   "register": "Register",
+  "register-now": "Register now",
+  "forgot-password": "Forgot password",
+  "reset-password": "Reset password",
+  "remember-me": "Remember me",
+  "continue": "Continue",
+  "or": "Or",
+  "logout": "Logout",
+  "actions": "Actions",
   "message_404": "Sorry, the page you visited does not exist.",
+  "message_401": "Sorry, the page you visited does not exist.",
+
+  "messages": {
+    "input": "Please input {{attr}}",
+    "in-valid": "The input is not valid {{attr}}",
+    "confirm-password": "The two passwords that you entered do not match!",
+    "confirm-delete": "Do you want to delete this item?"
+  },
+  "placeholders": {
+    "input": "Enter {{attr}}"
+  },
+  "attributes": {
+    "website": "website",
+    "address": "Address",
+    "phone": "Phone",
+    "name": "Name",
+    "username": "Username",
+    "firstname": "First name",
+    "lastname": "Last name",
+    "birthday": "Birthday",
+    "gender": "Gender",
+    "male": "Male",
+    "female": "Female",
+    "other": "Other",
+    "email": "Email address",
+    "password": "Password",
+    "confirm-password": "Confirm password",
+    "new-password": "New password",
+    "repeat-new-password": "Repeat new password",
+    "end": "End"
+  },
   "back_home": "Back Home"
 }

@@ -1,9 +1,18 @@
-export const checkPermission = (userInfo) => {
-  console.log(userInfo)
-  return true
+import { deleteStorage, getAccessToken } from '../utils/helpers'
+
+export const checkPermission = (permission) => {
+  return !!permission
 }
 
-export const hasAuth = (userInfo) => {
-  console.log(userInfo)
-  return true
+/**
+ * Check has token on local store
+ */
+export const hasAuth = () => {
+  const token = getAccessToken()
+  if (token) {
+    return true
+  }
+
+  deleteStorage()
+  return false
 }

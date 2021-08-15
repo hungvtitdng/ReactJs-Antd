@@ -1,9 +1,9 @@
 import React from 'react'
-import TitleApp from '../../components/TitleApp'
+import Title from '../../components/Title'
 
 const DashboardPage = () => (
   <>
-    <TitleApp name="Dashboard page" />
+    <Title name="Dashboard" />
     <h1>Dashboard</h1>
   </>
 )

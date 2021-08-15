@@ -1,0 +1,96 @@
+@import './constants.scss';
+
+/**
+ * Config constant
+ */
+$heightHeader: 50px;
+$liderBarWidth: 70px;
+
+/* Start style component */
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.875rem; /* ~ 14px */
+  color: $textColor;
+}
+
+/* Slide bar */
+.ant-layout-sider-collapsed.slider-bar {
+  flex: 0 0 $liderBarWidth !important;
+  max-width: $liderBarWidth !important;
+  min-width: $liderBarWidth !important;
+  width: $liderBarWidth !important;
+}
+aside.ant-layout-sider {
+  .header-logo {
+    height: $heightHeader;
+    color: white;
+    font-weight: bold;
+    background-color: $mainColor;
+  }
+}
+
+/* Header */
+header.ant-layout-header {
+  background-color: $mainColor;
+  padding: 0;
+  line-height: $heightHeader;
+  height: $heightHeader;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+/* Color */
+.color-main {
+  color: $mainColor !important;
+}
+.color-primary {
+  color: $colorPrimary !important;
+}
+.color-success {
+  color: $colorSuccess !important;
+}
+.color-warning {
+  color: $colorWarning !important;
+}
+.color-danger {
+  color: $colorDanger !important;
+}
+.color-info {
+  color: $colorInfo !important;
+}
+.color-dark {
+  color: $colorDark !important;
+}
+.color-white {
+  color: $colorWhite !important;
+}
+.color-muted {
+  color: $colorMuted !important;
+}
+
+
+/* Custom Ant */
+.ant-input-number {
+  width: 100% !important;
+}
+
+/* hidden-scrollbar */
+.hidden-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+:focus {
+  outline: none !important;
+}
+
+.w-88 {
+  width: 22rem;
+}
+
+.w-128 {
+  width: 32rem;
+}
+.flex-0-0-auto {
+  flex: 0 0 auto !important;
+}

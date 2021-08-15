@@ -54,3 +54,16 @@ export const errorException = (error) => {
 
   return Promise.reject(error.response?.data)
 }
+
+export const checkSubPaths = (url, subPaths) => {
+  let hasSubPath = false
+
+  subPaths.forEach((sp) => {
+    if (url.indexOf(sp) === 0) {
+      hasSubPath = true
+      return false
+    }
+  })
+
+  return hasSubPath
+}

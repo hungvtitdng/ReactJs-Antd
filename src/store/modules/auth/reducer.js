@@ -4,10 +4,13 @@ import * as CONST from './constants'
 
 export const initialState = {
   submitting: false,
-  error: false,
   success: false,
-  user: null,
   accessToken: null,
+  user: {
+    firstname: 'Hung',
+    lastname: 'Vo',
+    permission: true,
+  },
 }
 
 const loginReducer = (state = initialState, action) =>

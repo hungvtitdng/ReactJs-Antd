@@ -1,36 +1,18 @@
 import {
   DashboardOutlined,
   TeamOutlined,
-  UserOutlined,
-  LoginOutlined,
-  UserSwitchOutlined,
 } from '@ant-design/icons'
+import { trans } from '../../i18n'
 
 export default [
   {
     path: '/',
-    title: 'Dashboard',
+    title: trans('dashboard'),
     icon: DashboardOutlined,
   },
   {
     path: '/users',
-    title: 'Account',
+    title: trans('accounts'),
     icon: TeamOutlined,
-  },
-  {
-    path: '/users/123456',
-    title: 'Account Detail',
-    icon: UserOutlined,
-  },
-  // Just for test restrict path
-  {
-    path: '/login',
-    title: 'Login',
-    icon: LoginOutlined,
-  },
-  {
-    path: '/register',
-    title: 'Register',
-    icon: UserSwitchOutlined,
   },
 ]

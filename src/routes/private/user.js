@@ -16,6 +16,11 @@ const ProfilePage = Loadable({
   loading: LoadingPage,
 })
 
+const ChangePasswordPage = Loadable({
+  loader: () => import('../../pages/Profile'),
+  loading: LoadingPage,
+})
+
 const userRoutes = [
   {
     path: '/users',
@@ -36,6 +41,13 @@ const userRoutes = [
     exact: true,
     requiredAuth: true,
     component: ProfilePage,
+    layout: MainLayout,
+  },
+  {
+    path: '/change-password',
+    exact: true,
+    requiredAuth: true,
+    component: ChangePasswordPage,
     layout: MainLayout,
   },
 ]

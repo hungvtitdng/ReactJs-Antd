@@ -2,9 +2,8 @@ import React from 'react'
 import { Layout } from 'antd'
 
 const GuestLayout = ({ children }) => (
-  <Layout className="guest-layout">
-    <Layout.Content>
-      <h1 className="brand-name">{process.env.REACT_APP_NAME}</h1>
+  <Layout className="min-h-screen">
+    <Layout.Content className="p-4 flex justify-center items-start min-h-screen">
       {children}
     </Layout.Content>
   </Layout>

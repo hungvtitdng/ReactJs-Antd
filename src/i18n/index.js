@@ -33,10 +33,6 @@ i18n
  * @param option
  * @returns {string}
  */
-const trans = (key, option = {}) => i18n.t(key, option)
-
-export {
-  trans,
-}
+export const trans = (key, option = {}) => i18n.t(key, option)
 
 export default i18n

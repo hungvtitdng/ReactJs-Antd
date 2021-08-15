@@ -7,9 +7,9 @@ import UnauthorizedPage from '../pages/Error/Unauthorized'
 
 import { user } from '../store/modules/auth/selectors'
 
-const PrivateRoute = ({ userInfo, component: Component, ...rest }) => {
-  if (hasAuth(userInfo)) {
-    if (checkPermission()) {
+const PrivateRoute = ({ authUser, component: Component, ...rest }) => {
+  if (hasAuth(authUser)) {
+    if (checkPermission(authUser?.permission)) {
       return <Route {...rest} render={() => <Component />} />
     }
 
@@ -20,7 +20,7 @@ const PrivateRoute = ({ userInfo, component: Component, ...rest }) => {
 }
 
 const mapStateToProps = createStructuredSelector({
-  userInfo: user(),
+  authUser: user(),
 })
 
 export default memo(connect(mapStateToProps)(PrivateRoute))

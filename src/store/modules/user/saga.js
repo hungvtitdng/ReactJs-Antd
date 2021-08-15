@@ -7,7 +7,7 @@ export function* getListSaGa(payload) {
   try {
     const res = yield call(list, payload.params)
 
-    yield put(getListSuccessAction(res.data))
+    yield put(getListSuccessAction(res))
   } catch (error) {
     yield put(handleErrorAction(error))
   }
