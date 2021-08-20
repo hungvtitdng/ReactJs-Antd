@@ -1,12 +1,12 @@
 import React from 'react'
 import { Button, Form, Input } from 'antd'
-import { LockOutlined, UserOutlined } from '@ant-design/icons'
 import Checkbox from 'antd/lib/checkbox/Checkbox'
 import { Link } from 'react-router-dom'
 import { trans } from '../../i18n'
 import WrapAuth from './wrap'
 import { setToken } from '../../utils/helpers'
 import history from '../../utils/history'
+import Icon from '../../components/Icon'
 
 const LoginPage = () => {
   const onFinish = (formData) => {
@@ -21,14 +21,14 @@ const LoginPage = () => {
         name="email"
         rules={[{ required: true, message: trans('messages.input', { attr: trans('attributes.email') }) }]}
       >
-        <Input prefix={<UserOutlined />} placeholder={trans('attributes.email')} />
+        <Input prefix={<Icon name="mdiEmailOutline" />} placeholder={trans('attributes.email')} />
       </Form.Item>
       <Form.Item
         name="password"
         rules={[{ required: true, message: trans('messages.input', { attr: trans('attributes.password') }) }]}
       >
         <Input
-          prefix={<LockOutlined />}
+          prefix={<Icon name="mdiLockOutline" />}
           type="password"
           placeholder={trans('attributes.password')}
         />

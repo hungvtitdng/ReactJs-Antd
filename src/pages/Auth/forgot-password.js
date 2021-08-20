@@ -1,8 +1,8 @@
 import React from 'react'
 import { Button, Form, Input } from 'antd'
-import { UserOutlined } from '@ant-design/icons'
 import { Link } from 'react-router-dom'
 import { trans } from '../../i18n'
+import Icon from '../../components/Icon'
 import WrapAuth from './wrap'
 
 const ForgotPasswordPage = () => {
@@ -16,7 +16,7 @@ const ForgotPasswordPage = () => {
         name="email"
         rules={[{ required: true, message: trans('messages.input', { attr: trans('attributes.email') }) }]}
       >
-        <Input prefix={<UserOutlined />} placeholder={trans('attributes.email')} />
+        <Input prefix={<Icon name="mdiEmailOutline" />} placeholder={trans('attributes.email')} />
       </Form.Item>
 
       <Form.Item>

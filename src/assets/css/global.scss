@@ -60,6 +60,9 @@
 .ml-4 {
   margin-left: 1rem;
 }
+.ml-50px {
+  margin-left: 50px;
+}
 
 /* Margin right */
 .mr-2 {
@@ -85,6 +88,11 @@
 .mt-8 {
   margin-top: 2rem;
 }
+
+.mt-10\%vh {
+  margin-top: calc( 100vh / 10);
+}
+
 
 /* Margin bottom */
 .mb-2 {
@@ -122,6 +130,9 @@
 .p-8 {
   padding: 2rem;
 }
+.p-12 {
+  padding: 2.5rem;
+}
 
 /* Padding Top */
 .pt-0 {
@@ -131,6 +142,9 @@
 /* Padding Left */
 .pl-2 {
   padding-left: 0.5rem;
+}
+.pl-3 {
+  padding-left: 0.75rem;
 }
 .pl-4 {
   padding-left: 1rem;
@@ -145,6 +159,9 @@
 /* Padding Right */
 .pr-2 {
   padding-right: 0.5rem;
+}
+.pr-3 {
+  padding-right: 0.75rem;
 }
 .pr-4 {
   padding-right: 1rem;
@@ -171,6 +188,15 @@
 }
 
 /* Font size */
+.fz-4 {
+  font-size: 1rem;
+}
+.fz-5 {
+  font-size: 1.25rem;
+}
+.fz-6 {
+  font-size: 1.5rem;
+}
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
@@ -246,6 +272,21 @@
 .bg-white {
   background-color: white;
 }
+.bg-warning {
+  background-color: $colorWarning;
+}
+.bg-success {
+  background-color: $colorSuccess;
+}
+.bg-primary {
+  background-color: $colorPrimary;
+}
+.bg-primary {
+  background-color: $colorPrimary;
+}
+.bg-main {
+  background-color: $mainColor !important;
+}
 
 /* Align */
 .text-center {
@@ -309,6 +350,9 @@
 .w-350px {
   width: 350px;
 }
+.w-375px {
+  width: 375px;
+}
 .w-400px {
   width: 400px;
 }
@@ -320,10 +364,24 @@
 
 /* height */
 .h-full {
-  height: 100%;
+  height: 100% !important;
 }
 .h-screen {
   height: 100vh;
+}
+
+
+.h-50px {
+  height: 50px;
+}
+.h-100px {
+  height: 100px;
+}
+.h-150px {
+  height: 150px;
+}
+.h-200px {
+  height: 200px;
 }
 
 .min-h-full {
@@ -401,6 +459,17 @@
 }
 
 /* Float */
+.float-left {
+  float: left;
+}
 .float-right {
   float: right;
+}
+/* white space normal */
+.whitespace-normal {
+  white-space: normal;
+}
+/** box shadown */
+.shadown-full {
+  box-shadow: 0 2px 18px -2px #808080;
 }

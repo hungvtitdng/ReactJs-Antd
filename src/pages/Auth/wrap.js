@@ -5,7 +5,7 @@ import Title from '../../components/Title'
 const WrapAuth = ({ children, title, onFinish, widthDefault, ...props }) => (
   <>
     <Title name={title} />
-    <div className={`bg-white p-8 ${widthDefault ?? 'w-88'}`}>
+    <div className={`shadown-full mt-10%vh bg-white p-12 ${widthDefault ?? 'w-96'}`}>
       <h1 className="text-center mb-6 text-3xl">{title}</h1>
 
       <Form {...props} onFinish={onFinish}>

@@ -1,9 +1,9 @@
 import React from 'react'
 import { Button, Form, Input, Select } from 'antd'
-import { LockOutlined, MailOutlined } from '@ant-design/icons'
 import { Link } from 'react-router-dom'
 import { trans } from '../../i18n'
 import WrapAuth from './wrap'
+import Icon from '../../components/Icon'
 
 const formItemLayout = {
   labelCol: {
@@ -50,7 +50,6 @@ const LoginPage = () => {
         ]}
       >
         <Input
-          prefix={<MailOutlined />}
           placeholder={trans('placeholders.input', { attr: trans('attributes.email') })}
         />
       </Form.Item>
@@ -60,7 +59,6 @@ const LoginPage = () => {
         rules={[{ required: true, message: trans('messages.input', { attr: trans('attributes.password') }) }]}
       >
         <Input.Password
-          prefix={<LockOutlined />}
           placeholder={trans('placeholders.input', { attr: trans('attributes.password') })}
         />
       </Form.Item>
@@ -86,7 +84,6 @@ const LoginPage = () => {
         ]}
       >
         <Input.Password
-          prefix={<LockOutlined />}
           placeholder={trans('placeholders.input', { attr: trans('attributes.confirm-password') })}
         />
       </Form.Item>
