@@ -8,7 +8,6 @@ const Actions = ({ t, editLink, onDelete }) => {
   const confirmDelete = () => {
     Modal.confirm({
       title: t('messages.confirm-delete'),
-      icon: <Icon name="mdiAlertCircleOutline" />,
       onOk: () => {
         onDelete()
       },
