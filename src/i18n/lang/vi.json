@@ -1,1 +1,59 @@
-{}
+{
+  "profile": "Thông tin cá nhân",
+  "change-password": "Đổi mật khẩu",
+  "dashboard": "Trang chủ",
+  "accounts": "Tài khoản",
+  "create": "Tạo mới",
+  "save": "Lưu",
+  "back": "Trở lại",
+  "edit": "Thay đổi",
+  "delete": "Xóa",
+  "user-list": "Danh sách tài khoản",
+  "login": "Đăng nhập",
+  "register": "Đăng ký",
+  "back-to-login": "Quay lại đăng nhập",
+  "register-now": "Đăng ký ngay",
+  "forgot-password": "Quên mật khẩu",
+  "reset-password": "Lấy lại mật khẩu",
+  "remember-me": "Nhớ đăng nhập",
+  "continue": "Tiếp tục",
+  "update-user": "Cập nhật tài khoản",
+  "create-user": "Tạo tài khoản",
+  "or": "Hoặc",
+  "logout": "Đăng xuất",
+  "actions": "Thao tác",
+  "message_404": "Xin lỗi, trang hiện tại không có.",
+  "message_401": "Xin lỗi, trang hiện tại không có.",
+
+  "messages": {
+    "input": "vui lòng nhập {{attr}}",
+    "in-valid": "{{attr}} không hợp lệ ",
+    "confirm-password": "Xác nhận mật khẩu không chính xác!",
+    "confirm-delete": "Bạn muốn xoá thông tin này?"
+  },
+  "placeholders": {
+    "input": "Nhập {{attr}}"
+  },
+  "attributes": {
+    "old-password": "Mật khẩu cũ",
+    "website": "website",
+    "address": "Địa chỉ",
+    "phone": "SĐT",
+    "name": "Tên",
+    "username": "Tên đăng nhập",
+    "firstname": "Tên",
+    "lastname": "Họ",
+    "birthday": "Ngày sinh",
+    "gender": "Giới tính",
+    "male": "Nam",
+    "female": "Nữ",
+    "other": "Khác",
+    "email": "Địa chỉ Email",
+    "password": "Mật khẩu",
+    "confirm-password": "Xác nhận mật khẩu",
+    "new-password": "Mật khẩu mới",
+    "repeat-new-password": "Nhập lại mật khẩu mới",
+    "end": "End"
+  },
+  "back_home": "Về trang chủ"
+}

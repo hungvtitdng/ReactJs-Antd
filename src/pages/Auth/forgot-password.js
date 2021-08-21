@@ -1,32 +1,32 @@
 import React from 'react'
 import { Button, Form, Input } from 'antd'
 import { Link } from 'react-router-dom'
-import { trans } from '../../i18n'
+import { withTranslation } from 'react-i18next'
 import Icon from '../../components/Icon'
 import WrapAuth from './wrap'
 
-const ForgotPasswordPage = () => {
+const ForgotPasswordPage = ({ t }) => {
   const onFinish = (formData) => {
     console.log(formData)
   }
 
   return (
-    <WrapAuth title={trans('forgot-password')} onFinish={onFinish}>
+    <WrapAuth title={t('forgot-password')} onFinish={onFinish}>
       <Form.Item
         name="email"
-        rules={[{ required: true, message: trans('messages.input', { attr: trans('attributes.email') }) }]}
+        rules={[{ required: true, message: t('messages.input', { attr: t('attributes.email') }) }]}
       >
-        <Input prefix={<Icon name="mdiEmailOutline" />} placeholder={trans('attributes.email')} />
+        <Input prefix={<Icon name="mdiEmailOutline" />} placeholder={t('attributes.email')} />
       </Form.Item>
 
       <Form.Item>
         <Button type="primary" htmlType="submit" className="w-full mr-2">
-          {trans('continue')}
+          {t('continue')}
         </Button>
-        {trans('or')} <Link to="/login" className="">{trans('back-to-login')}!</Link>
+        {t('or')} <Link to="/login" className="">{t('back-to-login')}!</Link>
       </Form.Item>
     </WrapAuth>
   )
 }
 
-export default ForgotPasswordPage
+export default withTranslation()(ForgotPasswordPage)

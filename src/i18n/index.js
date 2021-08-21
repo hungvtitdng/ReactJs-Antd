@@ -17,7 +17,6 @@ i18n
         translation: en,
       },
     },
-    lng: 'en',
     fallbackLng: 'en', // use en if detected lng is not available
     debug: true,
 
@@ -25,14 +24,5 @@ i18n
       escapeValue: false, // not needed for react as it escapes by default
     },
   })
-
-/**
- * Translate by key.
- *
- * @param key
- * @param option
- * @returns {string}
- */
-export const trans = (key, option = {}) => i18n.t(key, option)
 
 export default i18n

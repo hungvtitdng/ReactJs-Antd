@@ -1,11 +1,12 @@
 import React from 'react'
+import { withTranslation } from 'react-i18next'
 import Title from '../../components/Title'
 
-const DashboardPage = () => (
+const DashboardPage = ({ t }) => (
   <>
-    <Title name="Dashboard" />
+    <Title name={t('dashboard')} />
     <h1>Dashboard</h1>
   </>
 )
 
-export default DashboardPage
+export default withTranslation()(DashboardPage)

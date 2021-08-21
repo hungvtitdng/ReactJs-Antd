@@ -1,17 +1,17 @@
 import React from 'react'
 import { Col, Form, PageHeader, Row, Input, Button } from 'antd'
+import { withTranslation } from 'react-i18next'
 import Title from '../../components/Title'
-import { trans } from '../../i18n'
 
-const ChangePasswordPage = () => {
+const ChangePasswordPage = ({ t }) => {
   const onFinish = (formData) => {
     console.log(formData)
   }
 
   return (
     <>
-      <Title name={trans('attributes.change-password')} />
-      <PageHeader className="flex justify-center" title={trans('change-password')} />
+      <Title name={t('attributes.change-password')} />
+      <PageHeader className="flex justify-center" title={t('change-password')} />
 
       <Row>
         <Col md={24} lg={{ span: 16, offset: 4 }} xl={{ span: 12, offset: 6 }} xxl={{ span: 8, offset: 8 }}>
@@ -22,28 +22,28 @@ const ChangePasswordPage = () => {
             onFinish={onFinish}
           >
             <Form.Item
-              label={trans('attributes.old-password')}
+              label={t('attributes.old-password')}
               name="old_password"
-              rules={[{ required: true, message: trans('messages.input', { attr: trans('old-password') }) }]}
+              rules={[{ required: true, message: t('messages.input', { attr: t('attributes.old-password') }) }]}
             >
-              <Input.Password placeholder={trans('placeholders.input', { attr: trans('old-password') })} />
+              <Input.Password placeholder={t('placeholders.input', { attr: t('attributes.old-password') })} />
             </Form.Item>
             <Form.Item
-              label={trans('attributes.new-password')}
+              label={t('attributes.new-password')}
               name="new_password"
-              rules={[{ required: true, message: trans('messages.input', { attr: trans('new-password') }) }]}
+              rules={[{ required: true, message: t('messages.input', { attr: t('attributes.new-password') }) }]}
             >
-              <Input.Password placeholder={trans('placeholders.input', { attr: trans('new-password') })} />
+              <Input.Password placeholder={t('placeholders.input', { attr: t('attributes.new-password') })} />
             </Form.Item>
             <Form.Item
-              label={trans('attributes.repeat-new-password')}
+              label={t('attributes.repeat-new-password')}
               name="new_password_confirm"
-              rules={[{ required: true, message: trans('messages.input', { attr: trans('repeat-new-password') }) }]}
+              rules={[{ required: true, message: t('messages.input', { attr: t('attributes.repeat-new-password') }) }]}
             >
-              <Input.Password placeholder={trans('placeholders.input', { attr: trans('repeat-new-password') })} />
+              <Input.Password placeholder={t('placeholders.input', { attr: t('attributes.repeat-new-password') })} />
             </Form.Item>
             <Form.Item wrapperCol={{ offset: 10, span: 14 }}>
-              <Button className="btn" type="primary" htmlType="submit">Lưu</Button>
+              <Button className="btn" type="primary" htmlType="submit">{t('save')}</Button>
             </Form.Item>
           </Form>
         </Col>
@@ -51,4 +51,4 @@ const ChangePasswordPage = () => {
     </>
   )
 }
-export default ChangePasswordPage
+export default withTranslation()(ChangePasswordPage)

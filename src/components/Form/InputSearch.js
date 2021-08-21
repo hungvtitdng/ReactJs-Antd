@@ -1,10 +1,10 @@
 import React from 'react'
-import { SearchOutlined } from '@ant-design/icons'
 import { Input } from 'antd'
 import _ from 'lodash'
-import { trans } from '../../i18n'
+import { withTranslation } from 'react-i18next'
+import Icon from '../Icon'
 
-const InputSearch = ({ onFinish, ...props }) => {
+const InputSearch = ({ t, onFinish, ...props }) => {
   const onSearch = _.debounce((value) => {
     onFinish(value)
   }, 500)
@@ -14,10 +14,10 @@ const InputSearch = ({ onFinish, ...props }) => {
       {...props}
       onChange={(e) => onSearch(e.target.value)}
       className="w-auto"
-      placeholder={props.placeholder ?? trans('input_search_header')}
-      prefix={<SearchOutlined className="color-main" />}
+      placeholder={props.placeholder ?? t('input_search_header')}
+      prefix={<Icon name="mdiMagnify" className="color-main" />}
     />
   )
 }
 
-export default InputSearch
+export default withTranslation()(InputSearch)

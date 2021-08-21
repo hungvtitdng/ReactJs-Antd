@@ -1,15 +1,15 @@
 import React from 'react'
 import { Result, Button } from 'antd'
 import { Link } from 'react-router-dom'
-import { trans } from '../../i18n'
+import { withTranslation } from 'react-i18next'
 
-const NotFoundPage = () => (
+const NotFoundPage = ({ t }) => (
   <Result
     status="404"
     title="404"
-    subTitle={trans('message_404')}
-    extra={<Link to="/"><Button type="primary">{trans('back_home')}</Button></Link>}
+    subTitle={t('message_404')}
+    extra={<Link to="/"><Button type="primary">{t('back_home')}</Button></Link>}
   />
 )
 
-export default NotFoundPage
+export default withTranslation()(NotFoundPage)

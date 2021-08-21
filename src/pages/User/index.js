@@ -3,11 +3,11 @@ import React, { useEffect } from 'react'
 import { createStructuredSelector } from 'reselect'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
+import { withTranslation } from 'react-i18next'
 import Title from '../../components/Title'
 import BtnCreate from '../../components/Form/btnCreate'
 import TableComponent from '../../components/Table'
 import Actions from '../../components/Form/actions'
-import { trans } from '../../i18n'
 
 import { useInjectReducer } from '../../store/injectReducer'
 import { useInjectSaga } from '../../store/injectSaga'
@@ -17,7 +17,7 @@ import * as selectors from '../../store/modules/user/selectors'
 import * as userActions from '../../store/modules/user/actions'
 
 const key = 'user'
-const UserPage = ({ userActionsProp, list, loading }) => {
+const UserPage = ({ t, userActionsProp, list, loading }) => {
   useInjectReducer({ key, reducer })
   useInjectSaga({ key, saga })
 
@@ -27,32 +27,32 @@ const UserPage = ({ userActionsProp, list, loading }) => {
 
   const columns = [
     {
-      title: trans('attributes.username'),
+      title: t('attributes.username'),
       dataIndex: 'username',
     },
     {
-      title: trans('attributes.name'),
+      title: t('attributes.name'),
       dataIndex: 'name',
     },
     {
-      title: trans('attributes.email'),
+      title: t('attributes.email'),
       dataIndex: 'email',
     },
     {
-      title: trans('attributes.phone'),
+      title: t('attributes.phone'),
       dataIndex: 'phone',
     },
     {
-      title: trans('attributes.address'),
+      title: t('attributes.address'),
       dataIndex: 'address',
       render: (value) => `${value?.street} ${value?.city}`,
     },
     {
-      title: trans('attributes.website'),
+      title: t('attributes.website'),
       dataIndex: 'website',
     },
     {
-      title: trans('actions'),
+      title: t('actions'),
       width: 150,
       render: (row) => (
         <Actions
@@ -67,7 +67,7 @@ const UserPage = ({ userActionsProp, list, loading }) => {
     <>
       <Title name="User list" />
       <PageHeader
-        title={trans('user-list')}
+        title={t('user-list')}
         extra={<BtnCreate prefix="users" />}
       />
 
@@ -89,7 +89,9 @@ const mapDispatchToProps = (dispatch) => ({
   userActionsProp: bindActionCreators(userActions, dispatch),
 })
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(UserPage)
+export default withTranslation()(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps,
+  )(UserPage),
+)

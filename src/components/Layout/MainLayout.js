@@ -1,20 +1,13 @@
 import React, { useState, memo, useEffect } from 'react'
-import { connect } from 'react-redux'
-import { createStructuredSelector } from 'reselect'
-import { Layout, Menu } from 'antd'
-import { Link } from 'react-router-dom'
-import { user } from '../../store/modules/auth/selectors'
-import { checkPermission } from '../../routes/permission'
-
+import { Layout } from 'antd'
 import HeaderMain from './HeaderMain'
-import menuItems from './menu'
+import SliderBar from './SliderBar'
 
 const { Content, Sider } = Layout
 
-const MainLayout = ({ children, authUser }) => {
+const MainLayout = ({ children }) => {
   console.log('Main layout rendering')
 
-  const prePath = `/${window.location.pathname.split('/')[1]}`
   const [isCollapsed, setCollapsed] = useState(true)
 
   useEffect(() => {
@@ -29,15 +22,7 @@ const MainLayout = ({ children, authUser }) => {
             <span>HV</span>
           </div>
 
-          <Menu className="overflow-y-auto hidden-scrollbar border-r-0" mode="inline" defaultSelectedKeys={[prePath]}>
-            {menuItems.map((m) => (
-              checkPermission(m.path, authUser?.permissions) ? (
-                <Menu.Item key={m.path} icon={<m.icon />}>
-                  <Link to={m.path}>{m.title}</Link>
-                </Menu.Item>
-              ) : null
-            ))}
-          </Menu>
+          <SliderBar />
         </div>
       </Sider>
       <Layout className="flex h-screen">
@@ -52,10 +37,4 @@ const MainLayout = ({ children, authUser }) => {
   )
 }
 
-const mapStateToProps = createStructuredSelector({
-  authUser: user(),
-})
-
-export default memo(connect(
-  mapStateToProps,
-)(MainLayout))
+export default memo(MainLayout)

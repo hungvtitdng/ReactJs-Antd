@@ -1,15 +1,15 @@
 import { PageHeader } from 'antd'
 import React from 'react'
+import { withTranslation } from 'react-i18next'
 import Title from '../../components/Title'
-import { trans } from '../../i18n'
 import UserForm from './_form'
 
-const UserCreatePage = () => (
+const UserCreatePage = ({ t }) => (
   <>
     <Title name="User Detail" />
-    <PageHeader title={trans('create-user')} />
+    <PageHeader title={t('create-user')} />
     <UserForm />
   </>
 )
 
-export default UserCreatePage
+export default withTranslation()(UserCreatePage)

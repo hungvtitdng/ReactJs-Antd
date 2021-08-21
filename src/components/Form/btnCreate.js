@@ -1,13 +1,13 @@
 import React from 'react'
-import { PlusOutlined } from '@ant-design/icons'
 import { Button } from 'antd'
 import { Link } from 'react-router-dom'
-import { trans } from '../../i18n'
+import { withTranslation } from 'react-i18next'
+import Icon from '../Icon'
 
-const BtnCreate = ({ prefix }) => (
+const BtnCreate = ({ t, prefix }) => (
   <Link to={`/${prefix}/create`}>
-    <Button><PlusOutlined /> {trans('create')}</Button>
+    <Button><Icon name="mdiPlus" /> {t('create')}</Button>
   </Link>
 )
 
-export default BtnCreate
+export default withTranslation()(BtnCreate)

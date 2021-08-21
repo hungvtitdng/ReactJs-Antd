@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button, Form, Input, Select } from 'antd'
 import { Link } from 'react-router-dom'
-import { trans } from '../../i18n'
+import { withTranslation } from 'react-i18next'
 import WrapAuth from './wrap'
 
 const formItemLayout = {
@@ -27,49 +27,49 @@ const tailFormItemLayout = {
   },
 }
 
-const LoginPage = () => {
+const LoginPage = ({ t }) => {
   const onFinish = (formData) => {
     console.log(formData)
   }
 
   return (
-    <WrapAuth title={trans('register')} onFinish={onFinish} widthDefault="w-128" {...formItemLayout}>
+    <WrapAuth title={t('register')} onFinish={onFinish} widthDefault="w-128" {...formItemLayout}>
       <Form.Item
-        label={trans('attributes.email')}
+        label={t('attributes.email')}
         name="email"
         rules={[
           {
             type: 'email',
-            message: trans('messages.in-valid', { attr: trans('attributes.email') }),
+            message: t('messages.in-valid', { attr: t('attributes.email') }),
           },
           {
             required: true,
-            message: trans('messages.input', { attr: trans('attributes.email') }),
+            message: t('messages.input', { attr: t('attributes.email') }),
           },
         ]}
       >
         <Input
-          placeholder={trans('placeholders.input', { attr: trans('attributes.email') })}
+          placeholder={t('placeholders.input', { attr: t('attributes.email') })}
         />
       </Form.Item>
       <Form.Item
-        label={trans('attributes.password')}
+        label={t('attributes.password')}
         name="password"
-        rules={[{ required: true, message: trans('messages.input', { attr: trans('attributes.password') }) }]}
+        rules={[{ required: true, message: t('messages.input', { attr: t('attributes.password') }) }]}
       >
         <Input.Password
-          placeholder={trans('placeholders.input', { attr: trans('attributes.password') })}
+          placeholder={t('placeholders.input', { attr: t('attributes.password') })}
         />
       </Form.Item>
       <Form.Item
-        label={trans('attributes.confirm-password')}
+        label={t('attributes.confirm-password')}
         name="confirm_password"
         dependencies={['password']}
         hasFeedback
         rules={[
           {
             required: true,
-            message: trans('messages.input', { attr: trans('attributes.confirm-password') }),
+            message: t('messages.input', { attr: t('attributes.confirm-password') }),
           },
           ({ getFieldValue }) => ({
             validator(_, value) {
@@ -77,13 +77,13 @@ const LoginPage = () => {
                 return Promise.resolve()
               }
 
-              return Promise.reject(new Error(trans('messages.confirm-password')))
+              return Promise.reject(new Error(t('messages.confirm-password')))
             },
           }),
         ]}
       >
         <Input.Password
-          placeholder={trans('placeholders.input', { attr: trans('attributes.confirm-password') })}
+          placeholder={t('placeholders.input', { attr: t('attributes.confirm-password') })}
         />
       </Form.Item>
 
@@ -92,21 +92,21 @@ const LoginPage = () => {
         label="Gender"
         rules={[{ required: true, message: 'Please select gender!' }]}
       >
-        <Select placeholder={trans('placeholders.input', { attr: trans('attributes.gender') })}>
-          <Select.Option value="male">{trans('attributes.male')}</Select.Option>
-          <Select.Option value="female">{trans('attributes.female')}</Select.Option>
-          <Select.Option value="other">{trans('attributes.other')}</Select.Option>
+        <Select placeholder={t('placeholders.input', { attr: t('attributes.gender') })}>
+          <Select.Option value="male">{t('attributes.male')}</Select.Option>
+          <Select.Option value="female">{t('attributes.female')}</Select.Option>
+          <Select.Option value="other">{t('attributes.other')}</Select.Option>
         </Select>
       </Form.Item>
 
       <Form.Item {...tailFormItemLayout}>
         <Button type="primary" htmlType="submit" className="mr-2">
-          {trans('register')}
+          {t('register')}
         </Button>
-        {trans('or')} <Link to="/login" className="">{trans('back-to-login')}!</Link>
+        {t('or')} <Link to="/login" className="">{t('back-to-login')}!</Link>
       </Form.Item>
     </WrapAuth>
   )
 }
 
-export default LoginPage
+export default withTranslation()(LoginPage)

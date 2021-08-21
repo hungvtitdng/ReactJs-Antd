@@ -1,14 +1,14 @@
 import React from 'react'
 import { Tooltip, Button, Modal } from 'antd'
-import { EditOutlined, DeleteOutlined, ExclamationCircleOutlined } from '@ant-design/icons'
 import { Link } from 'react-router-dom'
-import { trans } from '../../i18n'
+import { withTranslation } from 'react-i18next'
+import Icon from '../Icon'
 
-const Actions = ({ editLink, onDelete }) => {
+const Actions = ({ t, editLink, onDelete }) => {
   const confirmDelete = () => {
     Modal.confirm({
-      title: trans('messages.confirm-delete'),
-      icon: <ExclamationCircleOutlined />,
+      title: t('messages.confirm-delete'),
+      icon: <Icon name="mdiAlertCircleOutline" />,
       onOk: () => {
         onDelete()
       },
@@ -17,19 +17,19 @@ const Actions = ({ editLink, onDelete }) => {
 
   return (
     <>
-      <Tooltip title={trans('edit')} color="blue">
+      <Tooltip title={t('edit')} color="blue">
         <Link to={editLink}>
-          <EditOutlined />
+          <Icon name="mdiPencilOutline" />
         </Link>
       </Tooltip>
 
       {!(onDelete instanceof Function) ? null : (
-        <Tooltip title={trans('delete')} color="red">
+        <Tooltip title={t('delete')} color="red">
           <Button
             type="link"
             onClick={confirmDelete}
           >
-            <DeleteOutlined className="color-danger" />
+            <Icon name="mdiTrashCanOutline" className="color-danger" />
           </Button>
         </Tooltip>
       )}
@@ -37,4 +37,4 @@ const Actions = ({ editLink, onDelete }) => {
   )
 }
 
-export default Actions
+export default withTranslation()(Actions)
