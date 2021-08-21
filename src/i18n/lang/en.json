@@ -4,6 +4,8 @@
   "dashboard": "Dashboard",
   "accounts": "Accounts",
   "create": "Create",
+  "save": "Save",
+  "back": "Back",
   "edit": "Edit",
   "delete": "Delete",
   "user-list": "User list",
@@ -15,6 +17,8 @@
   "reset-password": "Reset password",
   "remember-me": "Remember me",
   "continue": "Continue",
+  "update-user": "Update account",
+  "create-user": "Create account",
   "or": "Or",
   "logout": "Logout",
   "actions": "Actions",
@@ -31,6 +35,7 @@
     "input": "Enter {{attr}}"
   },
   "attributes": {
+    "old-password": "Old password",
     "website": "website",
     "address": "Address",
     "phone": "Phone",

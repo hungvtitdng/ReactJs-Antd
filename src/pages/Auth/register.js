@@ -3,7 +3,6 @@ import { Button, Form, Input, Select } from 'antd'
 import { Link } from 'react-router-dom'
 import { trans } from '../../i18n'
 import WrapAuth from './wrap'
-import Icon from '../../components/Icon'
 
 const formItemLayout = {
   labelCol: {

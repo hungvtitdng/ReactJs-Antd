@@ -6,8 +6,14 @@ const UserPage = Loadable({
   loader: () => import('../../pages/User'),
   loading: LoadingPage,
 })
-const UserDetailPage = Loadable({
-  loader: () => import('../../pages/User/detail'),
+
+const UserCreatePage = Loadable({
+  loader: () => import('../../pages/User/create'),
+  loading: LoadingPage,
+})
+
+const UserUpdatePage = Loadable({
+  loader: () => import('../../pages/User/update'),
   loading: LoadingPage,
 })
 
@@ -17,7 +23,7 @@ const ProfilePage = Loadable({
 })
 
 const ChangePasswordPage = Loadable({
-  loader: () => import('../../pages/Profile'),
+  loader: () => import('../../pages/Profile/change-password'),
   loading: LoadingPage,
 })
 
@@ -30,10 +36,17 @@ const userRoutes = [
     layout: MainLayout,
   },
   {
-    path: '/users/:id',
+    path: '/users/create',
     exact: true,
     requiredAuth: true,
-    component: UserDetailPage,
+    component: UserCreatePage,
+    layout: MainLayout,
+  },
+  {
+    path: '/users/update/:id',
+    exact: true,
+    requiredAuth: true,
+    component: UserUpdatePage,
     layout: MainLayout,
   },
   {

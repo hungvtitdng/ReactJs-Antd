@@ -14,10 +14,11 @@ export function getListSuccessAction(data) {
   }
 }
 
-export function getDetailAction(id) {
+export function getDetailAction(id, params) {
   return {
     type: CONST.GET_DETAIL_REQUEST,
     id,
+    params,
   }
 }
 

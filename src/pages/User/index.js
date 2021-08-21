@@ -35,6 +35,10 @@ const UserPage = ({ userActionsProp, list, loading }) => {
       dataIndex: 'name',
     },
     {
+      title: trans('attributes.email'),
+      dataIndex: 'email',
+    },
+    {
       title: trans('attributes.phone'),
       dataIndex: 'phone',
     },
@@ -53,7 +57,7 @@ const UserPage = ({ userActionsProp, list, loading }) => {
       render: (row) => (
         <Actions
           editLink={`/users/update/${row.id}`}
-          onDelete={() => userActionsProp.deleteAction(row.id)}
+          onDelete={() => console.log('delete')}
         />
       ),
     },

@@ -4,7 +4,6 @@ import * as CONST from './constants'
 export const initialState = {
   loading: false,
   submitting: false,
-  error: null,
   list: null,
   detail: null,
 }
@@ -14,7 +13,6 @@ const reducer = (state = initialState, action) =>
     switch (action.type) {
       case CONST.GET_LIST_REQUEST:
         draft.loading = true
-        draft.error = false
         break
 
       case CONST.GET_LIST_SUCCESS:
@@ -24,7 +22,6 @@ const reducer = (state = initialState, action) =>
 
       case CONST.GET_DETAIL_REQUEST:
         draft.loading = true
-        draft.error = false
         draft.detail = null
         break
 
@@ -35,7 +32,6 @@ const reducer = (state = initialState, action) =>
 
       case CONST.UPDATE_REQUEST:
         draft.submitting = true
-        draft.error = false
         break
 
       case CONST.UPDATE_SUCCESS:
@@ -44,7 +40,6 @@ const reducer = (state = initialState, action) =>
         break
 
       case CONST.HANDLE_ERROR:
-        draft.error = action.error
         draft.loading = false
         draft.submitting = false
         break
