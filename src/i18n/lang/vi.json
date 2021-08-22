@@ -5,13 +5,12 @@
   "accounts": "Tài khoản",
   "create": "Tạo mới",
   "save": "Lưu",
-  "back": "Trở lại",
+  "back": "Quay lại",
   "edit": "Thay đổi",
   "delete": "Xóa",
   "user-list": "Danh sách tài khoản",
   "login": "Đăng nhập",
   "register": "Đăng ký",
-  "back-to-login": "Quay lại đăng nhập",
   "register-now": "Đăng ký ngay",
   "forgot-password": "Quên mật khẩu",
   "reset-password": "Lấy lại mật khẩu",
@@ -24,15 +23,17 @@
   "actions": "Thao tác",
   "message-404": "Xin lỗi, trang hiện tại không có.",
   "message-401": "Xin lỗi, trang hiện tại không có.",
+  "back-home": "Về trang chủ",
 
   "messages": {
-    "input": "Vui lòng nhập {{attr}}",
+    "input": "Vui lòng nhập {{attr, lowercase}}",
+    "select": "Vui chọn {{attr, lowercase}}",
     "in-valid": "{{attr}} không hợp lệ ",
     "confirm-password": "Xác nhận mật khẩu không chính xác!",
     "confirm-delete": "Bạn muốn xoá thông tin này?"
   },
   "placeholders": {
-    "input": "Nhập {{attr}}"
+    "input": "Nhập {{attr, lowercase}}"
   },
   "attributes": {
     "old-password": "Mật khẩu cũ",
@@ -54,6 +55,5 @@
     "new-password": "Mật khẩu mới",
     "repeat-new-password": "Nhập lại mật khẩu mới",
     "end": "End"
-  },
-  "back_home": "Về trang chủ"
+  }
 }

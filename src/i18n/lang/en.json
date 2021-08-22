@@ -28,12 +28,13 @@
 
   "messages": {
     "input": "Please input {{attr}}",
-    "in-valid": "The input is not valid {{attr}}",
+    "select": "Please select {{attr}}",
+    "in-valid": "The input is not valid {{attr, lowercase}}",
     "confirm-password": "The two passwords that you entered do not match!",
     "confirm-delete": "Do you want to delete this item?"
   },
   "placeholders": {
-    "input": "Enter {{attr}}"
+    "input": "Enter {{attr, lowercase}}"
   },
   "attributes": {
     "old-password": "Old password",

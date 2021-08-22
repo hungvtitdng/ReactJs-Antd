@@ -21,15 +21,14 @@ const LoginPage = ({ t }) => {
         name="email"
         rules={[{ required: true, message: t('messages.input', { attr: t('attributes.email') }) }]}
       >
-        <Input prefix={<Icon name="mdiEmailOutline" />} placeholder={t('attributes.email')} />
+        <Input size="large" placeholder={t('attributes.email')} />
       </Form.Item>
       <Form.Item
         name="password"
         rules={[{ required: true, message: t('messages.input', { attr: t('attributes.password') }) }]}
       >
-        <Input
-          prefix={<Icon name="mdiLockOutline" />}
-          type="password"
+        <Input.Password
+          size="large"
           placeholder={t('attributes.password')}
         />
       </Form.Item>
@@ -42,10 +41,15 @@ const LoginPage = ({ t }) => {
       </Form.Item>
 
       <Form.Item>
-        <Button type="primary" htmlType="submit" className="w-full mr-2">
+        <Button
+          size="large"
+          type="primary"
+          htmlType="submit"
+          className="w-full mb-2"
+        >
           {t('login')}
         </Button>
-        {t('or')} <Link to="/register">{t('register-now')}!</Link>
+        {t('or')} <Link to="/register">{t('register')}!</Link>
       </Form.Item>
     </WrapAuth>
   )

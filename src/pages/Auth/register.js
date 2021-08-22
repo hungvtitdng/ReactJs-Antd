@@ -49,6 +49,7 @@ const LoginPage = ({ t }) => {
         ]}
       >
         <Input
+          size="large"
           placeholder={t('placeholders.input', { attr: t('attributes.email') })}
         />
       </Form.Item>
@@ -58,6 +59,7 @@ const LoginPage = ({ t }) => {
         rules={[{ required: true, message: t('messages.input', { attr: t('attributes.password') }) }]}
       >
         <Input.Password
+          size="large"
           placeholder={t('placeholders.input', { attr: t('attributes.password') })}
         />
       </Form.Item>
@@ -83,16 +85,17 @@ const LoginPage = ({ t }) => {
         ]}
       >
         <Input.Password
+          size="large"
           placeholder={t('placeholders.input', { attr: t('attributes.confirm-password') })}
         />
       </Form.Item>
 
       <Form.Item
         name="gender"
-        label="Gender"
-        rules={[{ required: true, message: 'Please select gender!' }]}
+        label={t('attributes.gender')}
+        rules={[{ required: true, message: t('messages.select', { attr: t('attributes.gender') }) }]}
       >
-        <Select placeholder={t('placeholders.input', { attr: t('attributes.gender') })}>
+        <Select size="large" placeholder={t('placeholders.input', { attr: t('attributes.gender') })}>
           <Select.Option value="male">{t('attributes.male')}</Select.Option>
           <Select.Option value="female">{t('attributes.female')}</Select.Option>
           <Select.Option value="other">{t('attributes.other')}</Select.Option>
@@ -100,10 +103,10 @@ const LoginPage = ({ t }) => {
       </Form.Item>
 
       <Form.Item {...tailFormItemLayout}>
-        <Button type="primary" htmlType="submit" className="mr-2">
+        <Button size="large" type="primary" htmlType="submit" className="mr-2">
           {t('register')}
         </Button>
-        {t('or')} <Link to="/login" className="">{t('back-to-login')}!</Link>
+        {t('or')} <Link to="/login" className="">{t('login')}!</Link>
       </Form.Item>
     </WrapAuth>
   )

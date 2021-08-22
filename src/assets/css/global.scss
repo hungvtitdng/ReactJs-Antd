@@ -270,6 +270,9 @@
 .color-muted {
   color: $colorMuted !important;
 }
+.color-initial {
+  color: initial;
+}
 
 /* Background */
 .bg-white {
@@ -420,6 +423,14 @@
 }
 .absolute {
   position: absolute;
+}
+
+/* Top/Right/Bottom/Left */
+.top-2 {
+  top: 0.5rem;
+}
+.right-2 {
+  right: 0.5rem;
 }
 
 /* Overflow Y */

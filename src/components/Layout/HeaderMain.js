@@ -6,9 +6,8 @@ import { createStructuredSelector } from 'reselect'
 import { withTranslation } from 'react-i18next'
 import { logout } from '../../utils/helpers'
 import * as authSelectors from '../../store/modules/auth/selectors'
-import i18n from '../../i18n'
 import Icon from '../Icon'
-import flags from './flags'
+import Flag from './flags'
 
 const { Header } = Layout
 const HeaderMain = ({ isCollapsed, onCollapse, authUser, t }) => {
@@ -40,16 +39,6 @@ const HeaderMain = ({ isCollapsed, onCollapse, authUser, t }) => {
     </Menu>
   )
 
-  const flagsMenu = (
-    <Menu className="dropdown-list w-150px">
-      {Object.values(flags).map((flag) => (
-        <Menu.Item key={flag.key} onClick={() => i18n.changeLanguage(flag.key)}>
-          <span className="fz-4">{flag.icon}</span> <span className="pl-4">{flag[`name_${i18n.language}`]}</span>
-        </Menu.Item>
-      ))}
-    </Menu>
-  )
-
   return (
     <>
       <Header>
@@ -60,14 +49,10 @@ const HeaderMain = ({ isCollapsed, onCollapse, authUser, t }) => {
           <Dropdown overlay={userActions} trigger={['click']}>
             <div className="flex items-center pointer relative pl-3">
               <span className="fz-4 pr-2">{authUser?.firstname} {authUser?.lastname}</span>
-              <img className="rounded-full" width={32} src="/assets/images/tmp.jpg" alt={authUser?.firstname} />
+              <img className="rounded-full" width={25} src="/assets/images/tmp.jpg" alt={authUser?.firstname} />
             </div>
           </Dropdown>
-          <Dropdown overlay={flagsMenu} trigger={['click']}>
-            <div className="flex items-center pointer relative pl-3">
-              <span className="fz-5 pr-2">{flags[i18n.language].icon}</span>
-            </div>
-          </Dropdown>
+          <Flag />
         </div>
       </Header>
     </>

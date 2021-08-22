@@ -16,14 +16,14 @@ const ForgotPasswordPage = ({ t }) => {
         name="email"
         rules={[{ required: true, message: t('messages.input', { attr: t('attributes.email') }) }]}
       >
-        <Input prefix={<Icon name="mdiEmailOutline" />} placeholder={t('attributes.email')} />
+        <Input size="large" prefix={<Icon name="mdiEmailOutline" className="color-muted" />} placeholder={t('attributes.email')} />
       </Form.Item>
 
       <Form.Item>
-        <Button type="primary" htmlType="submit" className="w-full mr-2">
+        <Button size="large" type="primary" htmlType="submit" className="w-full mb-2">
           {t('continue')}
         </Button>
-        {t('or')} <Link to="/login" className="">{t('back-to-login')}!</Link>
+        {t('or')} <Link to="/login" className="">{t('login')}!</Link>
       </Form.Item>
     </WrapAuth>
   )
