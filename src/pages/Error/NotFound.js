@@ -7,8 +7,8 @@ const NotFoundPage = ({ t }) => (
   <Result
     status="404"
     title="404"
-    subTitle={t('message_404')}
-    extra={<Link to="/"><Button type="primary">{t('back_home')}</Button></Link>}
+    subTitle={t('message-404')}
+    extra={<Link to="/"><Button type="primary">{t('back-home')}</Button></Link>}
   />
 )
 

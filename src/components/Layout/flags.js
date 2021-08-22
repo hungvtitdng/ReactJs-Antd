@@ -2,13 +2,13 @@ export default {
   vi: {
     key: 'vi',
     name_vi: 'Tiếng Việt',
-    name_en: 'Vietnamese',
+    'name_en-US': 'Vietnamese',
     icon: '🇻🇳',
   },
-  en: {
-    key: 'en',
+  'en-US': {
+    key: 'en-US',
     name_vi: 'Tiếng Anh',
-    name_en: 'English',
+    'name_en-US': 'English',
     icon: '🇺🇸',
   },
 }

@@ -51,6 +51,9 @@
 .ml-0 {
   margin-left: 0;
 }
+.ml-1 {
+  margin-left: 0.25rem;
+}
 .ml-2 {
   margin-left: 0.5rem;
 }
@@ -463,4 +466,12 @@
 /** box shadown */
 .shadown-full {
   box-shadow: 0 2px 18px -2px #808080;
+}
+
+/* text transform */
+.uppercase {
+  text-transform: uppercase;
+}
+.lowercase {
+  text-transform: lowercase;
 }

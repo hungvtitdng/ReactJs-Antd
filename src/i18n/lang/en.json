@@ -22,8 +22,9 @@
   "or": "Or",
   "logout": "Logout",
   "actions": "Actions",
-  "message_404": "Sorry, the page you visited does not exist.",
-  "message_401": "Sorry, the page you visited does not exist.",
+  "message-404": "Sorry, the page you visited does not exist.",
+  "message-401": "Sorry, the page you visited does not exist.",
+  "back-home": "Back Home",
 
   "messages": {
     "input": "Please input {{attr}}",
@@ -54,6 +55,5 @@
     "new-password": "New password",
     "repeat-new-password": "Repeat new password",
     "end": "End"
-  },
-  "back_home": "Back Home"
+  }
 }

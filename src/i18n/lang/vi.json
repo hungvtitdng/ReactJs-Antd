@@ -22,11 +22,11 @@
   "or": "Hoặc",
   "logout": "Đăng xuất",
   "actions": "Thao tác",
-  "message_404": "Xin lỗi, trang hiện tại không có.",
-  "message_401": "Xin lỗi, trang hiện tại không có.",
+  "message-404": "Xin lỗi, trang hiện tại không có.",
+  "message-401": "Xin lỗi, trang hiện tại không có.",
 
   "messages": {
-    "input": "vui lòng nhập {{attr}}",
+    "input": "Vui lòng nhập {{attr}}",
     "in-valid": "{{attr}} không hợp lệ ",
     "confirm-password": "Xác nhận mật khẩu không chính xác!",
     "confirm-delete": "Bạn muốn xoá thông tin này?"

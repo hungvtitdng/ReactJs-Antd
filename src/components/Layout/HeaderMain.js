@@ -18,11 +18,6 @@ const HeaderMain = ({ isCollapsed, onCollapse, authUser, t }) => {
     return <Icon name={name} size={1} className="color-white ml-2 pointer" onClick={onCollapse} />
   }
 
-  const changeLanguage = (lang) => {
-    console.log(lang)
-    i18n.changeLanguage(lang)
-  }
-
   const userActions = (
     <Menu className="dropdown-list">
       <Menu.Item key="1">
@@ -48,7 +43,7 @@ const HeaderMain = ({ isCollapsed, onCollapse, authUser, t }) => {
   const flagsMenu = (
     <Menu className="dropdown-list w-150px">
       {Object.values(flags).map((flag) => (
-        <Menu.Item key={flag.key} onClick={() => changeLanguage(flag.key)}>
+        <Menu.Item key={flag.key} onClick={() => i18n.changeLanguage(flag.key)}>
           <span className="fz-4">{flag.icon}</span> <span className="pl-4">{flag[`name_${i18n.language}`]}</span>
         </Menu.Item>
       ))}

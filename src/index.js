@@ -11,10 +11,8 @@ import { configure } from './store'
 import AppRoutes from './components/Application/AppRoutes'
 import route from './routes'
 
-const store = configure()
-
 render(
-  <Provider store={store}>
+  <Provider store={configure()}>
     <ConnectedRouter history={history}>
       <AppRoutes routes={route} />
     </ConnectedRouter>
