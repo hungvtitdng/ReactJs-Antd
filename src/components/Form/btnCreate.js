@@ -6,7 +6,9 @@ import Icon from '../Icon'
 
 const BtnCreate = ({ t, prefix }) => (
   <Link to={`/${prefix}/create`}>
-    <Button><Icon name="mdiPlus" /> {t('create')}</Button>
+    <Button icon={<Icon name="mdiPlus" />} className="flex items-center">
+      {t('create')}
+    </Button>
   </Link>
 )
 
