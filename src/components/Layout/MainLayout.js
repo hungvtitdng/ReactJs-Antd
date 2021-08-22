@@ -18,7 +18,7 @@ const MainLayout = ({ children }) => {
     <Layout className="min-h-screen">
       <Sider trigger={null} collapsible collapsed={isCollapsed} theme="light" className="slider-bar">
         <div className="flex h-screen flex-col">
-          <div className="header-logo flex justify-center items-center flex-0-0-auto">
+          <div className="header-logo flex justify-center items-center flex-0-0-auto hide-20">
             <span>HV</span>
           </div>
 

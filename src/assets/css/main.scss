@@ -98,3 +98,24 @@ header.ant-layout-header {
 .flex-0-0-auto {
   flex: 0 0 auto !important;
 }
+
+/** Just for mobile mode */
+@media only screen and (max-width: 768px) {
+  /* Left Slider Bar  */
+  .ant-layout-sider-collapsed.slider-bar {
+      flex: 0 0 0px !important;
+      max-width: 0px !important;
+      min-width: 0px !important;
+      width: 0px !important;
+  }
+  .ant-layout-sider-collapsed .hide-20 {
+      visibility: hidden;
+      transition: all 0.2s ease 0s;
+      -webkit-transition: all 0.2s ease 0s;
+  }
+  .ant-layout-sider-collapsed .hide-05 {
+      visibility: hidden;
+      transition: all 0.05s ease 0s;
+      -webkit-transition: all 0.05s ease 0s;
+  }
+}

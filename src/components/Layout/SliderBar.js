@@ -25,7 +25,7 @@ const SliderBarItems = ({ authUser, t }) => {
   ]
 
   return (
-    <Menu className="overflow-y-auto hidden-scrollbar border-r-0" mode="inline" defaultSelectedKeys={[prePath]}>
+    <Menu className="overflow-y-auto hidden-scrollbar border-r-0 hide-05" mode="inline" defaultSelectedKeys={[prePath]}>
       {menuItems.map((m) => (
         checkPermission(m.path, authUser?.permissions) ? (
           <Menu.Item key={m.path} icon={<Icon name={m.iconName} />}>
