@@ -8,8 +8,14 @@
 @import './constants.scss';
 
 /* Display */
+.hide {
+  display: none !important;
+}
 .flex {
   display: flex !important;
+}
+.grid {
+  display: grid;
 }
 
 /* justify-content with flex */
@@ -19,9 +25,8 @@
 .justify-center {
   justify-content: center;
 }
-
-.hide {
-  display: none !important;
+.justify-between {
+  justify-content: space-between;
 }
 
 /* Margin */
@@ -200,6 +205,18 @@
 .fz-6 {
   font-size: 1.5rem;
 }
+.fz-7 {
+  font-size: 1.75rem;
+}
+.fz-8 {
+  font-size: 2rem;
+}
+.fz-9 {
+  font-size: 2.25rem;
+}
+.fz-10 {
+  font-size: 2.5rem;
+}
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
@@ -284,11 +301,14 @@
 .bg-success {
   background-color: $colorSuccess;
 }
-.bg-primary {
-  background-color: $colorPrimary;
+.bg-info {
+  background-color: $colorInfo;
 }
 .bg-primary {
   background-color: $colorPrimary;
+}
+.bg-danger {
+  background-color: $colorDanger;
 }
 .bg-main {
   background-color: $mainColor !important;
@@ -474,9 +494,15 @@
 .whitespace-normal {
   white-space: normal;
 }
+.whitespace-nowrap {
+  white-space: nowrap;
+}
 /** box shadown */
 .shadown-full {
   box-shadow: 0 2px 18px -2px #808080;
+}
+.shadown-hover:hover {
+  box-shadow: 0 0 25px -5px #9e9c9e;
 }
 
 /* text transform */
@@ -485,4 +511,13 @@
 }
 .lowercase {
   text-transform: lowercase;
+}
+
+/**/
+.transition {
+  transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
 }

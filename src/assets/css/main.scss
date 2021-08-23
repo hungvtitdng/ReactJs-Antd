@@ -14,12 +14,6 @@ body {
 }
 
 /* Slide bar */
-.ant-layout-sider-collapsed.slider-bar {
-  flex: 0 0 $liderBarWidth !important;
-  max-width: $liderBarWidth !important;
-  min-width: $liderBarWidth !important;
-  width: $liderBarWidth !important;
-}
 aside.ant-layout-sider {
   .header-logo {
     height: $heightHeader;
@@ -33,7 +27,6 @@ aside.ant-layout-sider {
 header.ant-layout-header {
   background-color: $mainColor;
   padding: 0;
-  line-height: $heightHeader;
   height: $heightHeader;
   display: flex;
   justify-content: space-between;
@@ -99,9 +92,25 @@ header.ant-layout-header {
   flex: 0 0 auto !important;
 }
 
+
+.fadeOut {
+  visibility: hidden;
+  opacity: 0;
+  width: 0;
+  transition: visibility 0s linear 300ms, opacity 200ms;
+}
+.fadeIn {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s linear 0s, opacity 200ms;
+}
+
 /** Just for mobile mode */
 @media only screen and (max-width: 768px) {
   /* Left Slider Bar  */
+  .m-hide {
+    display: none;
+  }
   .ant-layout-sider-collapsed.slider-bar {
       flex: 0 0 0px !important;
       max-width: 0px !important;

@@ -6,7 +6,6 @@ import { withTranslation } from 'react-i18next'
 import WrapAuth from './wrap'
 import { setToken } from '../../utils/helpers'
 import history from '../../utils/history'
-import Icon from '../../components/Icon'
 
 const LoginPage = ({ t }) => {
   const onFinish = (formData) => {

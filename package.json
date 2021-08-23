@@ -18,6 +18,7 @@
     "immer": "^5.3.6",
     "invariant": "^2.2.4",
     "lodash": "^4.17.15",
+    "moment": "^2.29.1",
     "normalize": "^0.3.1",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
