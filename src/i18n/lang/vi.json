@@ -1,10 +1,17 @@
 {
+  "roles": "Quyền hạn",
+  "department": "Bộ phận",
+  "position": "Chức vụ",
+  "working-start-date": "Ngày bắt đầu làm việc",
   "profile": "Thông tin cá nhân",
+  "profile-detail": "Thông tin cá nhân",
   "change-password": "Đổi mật khẩu",
   "dashboard": "Thống kê",
   "accounts": "Tài khoản",
   "create": "Tạo mới",
   "save": "Lưu",
+  "avatar": "Hình đại diện",
+  "other-info": "Thông tin khác",
   "back": "Quay lại",
   "edit": "Thay đổi",
   "delete": "Xóa",
@@ -36,6 +43,7 @@
     "input": "Nhập {{attr, lowercase}}"
   },
   "attributes": {
+    "fullname": "Họ và tên",
     "old-password": "Mật khẩu cũ",
     "website": "website",
     "address": "Địa chỉ",

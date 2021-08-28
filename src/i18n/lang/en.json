@@ -1,10 +1,17 @@
 {
+  "roles": "Roles",
+  "department": "Department",
+  "position": "Position",
+  "working-start-date": "Working start date",
   "profile": "Profile",
+  "profile-detail": "Profile detail",
   "change-password": "Change password",
   "dashboard": "Dashboard",
   "accounts": "Accounts",
   "create": "Create",
   "save": "Save",
+  "avatar": "Avatar",
+  "other-info": "Other info",
   "back": "Back",
   "edit": "Edit",
   "delete": "Delete",
@@ -37,6 +44,7 @@
     "input": "Enter {{attr, lowercase}}"
   },
   "attributes": {
+    "fullname": "Full name",
     "old-password": "Old password",
     "website": "website",
     "address": "Address",

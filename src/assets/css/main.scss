@@ -8,7 +8,7 @@ $liderBarWidth: 70px;
 
 /* Start style component */
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif !important;
   font-size: 0.875rem; /* ~ 14px */
   color: $textColor;
 }
@@ -92,13 +92,13 @@ header.ant-layout-header {
   flex: 0 0 auto !important;
 }
 
-
 .fadeOut {
   visibility: hidden;
   opacity: 0;
   width: 0;
   transition: visibility 0s linear 300ms, opacity 200ms;
 }
+
 .fadeIn {
   visibility: visible;
   opacity: 1;

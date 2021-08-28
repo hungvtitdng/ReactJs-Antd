@@ -64,7 +64,7 @@ const UserPage = ({ t, userActionsProp, list, loading }) => {
   ]
 
   return (
-    <>
+    <div className="bg-white mt-4">
       <Title name="User list" />
       <PageHeader
         title={t('user-list')}
@@ -76,7 +76,7 @@ const UserPage = ({ t, userActionsProp, list, loading }) => {
         columns={columns}
         data={list}
       />
-    </>
+    </div>
   )
 }
 

@@ -28,10 +28,8 @@ const MainLayout = ({ children }) => {
       </Sider>
       <Layout className="flex h-screen">
         <HeaderMain isCollapsed={isCollapsed} onCollapse={() => setCollapsed(!isCollapsed)} />
-        <Content className="overflow-y-auto">
-          <div className="m-4 pb-4 pr-4 pl-4 bg-white">
-            {children}
-          </div>
+        <Content className="overflow-y-auto pl-4 pr-4 pb-4">
+          {children}
         </Content>
       </Layout>
     </Layout>

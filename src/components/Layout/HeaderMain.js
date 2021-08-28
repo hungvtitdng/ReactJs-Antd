@@ -41,7 +41,7 @@ const HeaderMain = ({ isCollapsed, onCollapse, authUser, t }) => {
 
   return (
     <>
-      <Header hasSider>
+      <Header>
         <div className="flex items-center">
           <MenuIcon />
         </div>

@@ -9,11 +9,11 @@ export const REQUEST_HEADER = {
 }
 
 export const FORM_LAYOUT = {
-  labelCol: { span: 5 },
-  wrapperCol: { span: 19 },
+  labelCol: { span: 7 },
+  wrapperCol: { span: 17 },
   layout: 'horizontal',
 }
 
 export const FORM_BUTTONS = {
-  wrapperCol: { offset: 5, span: 19 },
+  wrapperCol: { offset: 7, span: 17 },
 }

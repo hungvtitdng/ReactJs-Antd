@@ -19,7 +19,7 @@ const TableComponent = ({ key = 'id', data, onPageChange, ...props }) => {
       {...props}
       rowKey={key}
       columns={columns}
-      className="overflow-x-auto min-w-full"
+      className="overflow-x-auto min-w-full pr-4 pl-4"
       dataSource={data}
       pagination={{
         onChange: (p) => {
