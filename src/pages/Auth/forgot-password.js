@@ -16,7 +16,7 @@ const ForgotPasswordPage = ({ t }) => {
         name="email"
         rules={[{ required: true, message: t('messages.input', { attr: t('attributes.email') }) }]}
       >
-        <Input size="large" prefix={<Icon name="mdiEmailOutline" className="color-muted" />} placeholder={t('attributes.email')} />
+        <Input size="large" prefix={<Icon name="mdiEmailOutline" className="color-gray" />} placeholder={t('attributes.email')} />
       </Form.Item>
 
       <Form.Item>

@@ -281,29 +281,29 @@
 .color-main {
   color: $mainColor !important;
 }
-.color-primary {
-  color: $colorPrimary !important;
+.color-blue {
+  color: $colorBlue !important;
 }
-.color-success {
-  color: $colorSuccess !important;
+.color-green {
+  color: $colorGreen !important;
 }
-.color-warning {
-  color: $colorWarning !important;
+.color-orange {
+  color: $colorOrange !important;
 }
-.color-danger {
-  color: $colorDanger !important;
+.color-red {
+  color: $colorRed !important;
 }
-.color-info {
-  color: $colorInfo !important;
+.color-cyan {
+  color: $colorCyan !important;
 }
-.color-dark {
-  color: $colorDark !important;
+.color-black {
+  color: $colorBlack !important;
 }
 .color-white {
   color: $colorWhite !important;
 }
-.color-muted {
-  color: $colorMuted !important;
+.color-gray {
+  color: $colorGray !important;
 }
 .color-initial {
   color: initial;
@@ -313,20 +313,20 @@
 .bg-white {
   background-color: white;
 }
-.bg-warning {
-  background-color: $colorWarning;
+.bg-orange {
+  background-color: $colorOrange;
 }
-.bg-success {
-  background-color: $colorSuccess;
+.bg-green {
+  background-color: $colorGreen;
 }
-.bg-info {
-  background-color: $colorInfo;
+.bg-cyan {
+  background-color: $colorCyan;
 }
-.bg-primary {
-  background-color: $colorPrimary;
+.bg-blue {
+  background-color: $colorBlue;
 }
-.bg-danger {
-  background-color: $colorDanger;
+.bg-red {
+  background-color: $colorRed;
 }
 .bg-main {
   background-color: $mainColor !important;

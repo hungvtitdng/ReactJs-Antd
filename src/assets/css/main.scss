@@ -37,29 +37,29 @@ header.ant-layout-header {
 .color-main {
   color: $mainColor !important;
 }
-.color-primary {
-  color: $colorPrimary !important;
+.color-blue {
+  color: $colorBlue !important;
 }
-.color-success {
-  color: $colorSuccess !important;
+.color-green {
+  color: $colorGreen !important;
 }
-.color-warning {
-  color: $colorWarning !important;
+.color-orange {
+  color: $colorOrange !important;
 }
-.color-danger {
-  color: $colorDanger !important;
+.color-red {
+  color: $colorRed !important;
 }
-.color-info {
-  color: $colorInfo !important;
+.color-cyan {
+  color: $colorCyan !important;
 }
-.color-dark {
-  color: $colorDark !important;
+.color-black {
+  color: $colorBlack !important;
 }
 .color-white {
   color: $colorWhite !important;
 }
-.color-muted {
-  color: $colorMuted !important;
+.color-gray {
+  color: $colorGray !important;
 }
 
 
@@ -108,9 +108,6 @@ header.ant-layout-header {
 /** Just for mobile mode */
 @media only screen and (max-width: 768px) {
   /* Left Slider Bar  */
-  .m-hide {
-    display: none;
-  }
   .ant-layout-sider-collapsed.slider-bar {
       flex: 0 0 0px !important;
       max-width: 0px !important;

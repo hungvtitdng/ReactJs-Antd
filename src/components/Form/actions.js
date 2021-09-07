@@ -28,7 +28,7 @@ const Actions = ({ t, editLink, onDelete }) => {
             type="link"
             onClick={confirmDelete}
           >
-            <Icon name="mdiTrashCanOutline" className="color-danger" />
+            <Icon name="mdiTrashCanOutline" className="color-red" />
           </Button>
         </Tooltip>
       )}

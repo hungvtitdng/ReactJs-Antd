@@ -81,7 +81,7 @@ const DashboardPage = ({ t }) => (
         title="Orders Received"
         subTitle="Completed Orders"
         iconName="mdiAccountGroup"
-        bgClassname="bg-success-gradient"
+        bgClassname="bg-green-gradient"
         value={formatNumber(4200)}
         subValue={formatNumber(200)}
       />
@@ -89,7 +89,7 @@ const DashboardPage = ({ t }) => (
         title="Total Sales"
         subTitle="This Month"
         iconName="mdiCartOutline"
-        bgClassname="bg-warning-gradient"
+        bgClassname="bg-orange-gradient"
         value={`$${formatNumber(1800)}`}
         subValue={`$${formatNumber(700)}`}
       />
@@ -97,7 +97,7 @@ const DashboardPage = ({ t }) => (
         title="Revenue"
         subTitle="This Month"
         iconName="mdiCashMultiple"
-        bgClassname="bg-danger-gradient"
+        bgClassname="bg-red-gradient"
         value={`$${formatNumber(1800)}`}
         subValue={`$${formatNumber(700)}`}
       />
@@ -105,7 +105,7 @@ const DashboardPage = ({ t }) => (
         title="Total Profit"
         subTitle="This Month"
         iconName="mdiSealVariant"
-        bgClassname="bg-primary-gradient"
+        bgClassname="bg-blue-gradient"
         value={`$${formatNumber(1800)}`}
         subValue={`$${formatNumber(700)}`}
       />

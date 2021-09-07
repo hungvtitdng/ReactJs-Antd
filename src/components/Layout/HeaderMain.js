@@ -33,7 +33,7 @@ const HeaderMain = ({ isCollapsed, onCollapse, authUser, t }) => {
       <Menu.Divider />
       <Menu.Item key="7" onClick={logout}>
         <div className="flex items-center p-1">
-          <Icon name="mdiLogout" className="color-danger" /> <span className="pl-4">{t('logout')}</span>
+          <Icon name="mdiLogout" className="color-red" /> <span className="pl-4">{t('logout')}</span>
         </div>
       </Menu.Item>
     </Menu>

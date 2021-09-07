@@ -26,8 +26,8 @@ const ProfilePage = ({ t }) => {
             extra={(
               <Button type="link" className="p-0 h-auto" onClick={() => setEdit(!isEdit)}>
                 {isEdit ?
-                  <Icon name="mdiWindowClose" className="color-danger" /> :
-                  <Icon name="mdiAccountEditOutline" className="color-primary" />
+                  <Icon name="mdiWindowClose" className="color-red" /> :
+                  <Icon name="mdiAccountEditOutline" className="color-blue" />
                 }
               </Button>
             )}

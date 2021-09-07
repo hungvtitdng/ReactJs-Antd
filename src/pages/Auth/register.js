@@ -27,7 +27,7 @@ const tailFormItemLayout = {
   },
 }
 
-const LoginPage = ({ t }) => {
+const RegisterPage = ({ t }) => {
   const onFinish = (formData) => {
     console.log(formData)
   }
@@ -112,4 +112,4 @@ const LoginPage = ({ t }) => {
   )
 }
 
-export default withTranslation()(LoginPage)
+export default withTranslation()(RegisterPage)
