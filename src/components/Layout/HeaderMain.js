@@ -7,7 +7,7 @@ import { withTranslation } from 'react-i18next'
 import { logout } from '../../utils/helpers'
 import * as authSelectors from '../../store/modules/auth/selectors'
 import Icon from '../Icon'
-import Flag from './flags'
+import Flag from './Flags'
 
 const { Header } = Layout
 const HeaderMain = ({ isCollapsed, onCollapse, authUser, t }) => {

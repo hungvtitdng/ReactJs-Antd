@@ -1,6 +1,8 @@
 export const PAGE_SIZE = 15
 
-export const ACCESS_TOKEN = 'access-token'
+export const STORAGE_KEY = {
+  ACCESS_TOKEN: 'at',
+}
 
 export const REQUEST_HEADER = {
   Accept: 'application/json',

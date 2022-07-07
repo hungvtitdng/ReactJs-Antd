@@ -1,5 +1,5 @@
 import history from './history'
-import { ACCESS_TOKEN, PAGE_SIZE } from '../config/constants'
+import { PAGE_SIZE, STORAGE_KEY } from '../config/constants'
 
 export const formatNumber = (num) => {
   return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
@@ -9,16 +9,16 @@ export const setIndexTableRow = (index, page) => {
   return (page - 1) * PAGE_SIZE + index + 1
 }
 
-export const setToken = (accessToken) => {
-  localStorage.setItem(ACCESS_TOKEN, accessToken)
+export const setAccessToken = (accessToken) => {
+  localStorage.setItem(STORAGE_KEY.ACCESS_TOKEN, accessToken)
 }
 
 export const getAccessToken = () => {
-  return localStorage.getItem(ACCESS_TOKEN)
+  return localStorage.getItem(STORAGE_KEY.ACCESS_TOKEN)
 }
 
 export const deleteStorage = () => {
-  localStorage.removeItem(ACCESS_TOKEN)
+  localStorage.removeItem(STORAGE_KEY.ACCESS_TOKEN)
 }
 
 export const logout = () => {

@@ -1,6 +1,7 @@
 import { call, put, takeEvery } from 'redux-saga/effects'
 import { notification } from 'antd'
 import history from '../../../utils/history'
+import { setAccessToken } from '../../../utils/helpers'
 import {
   LOGIN_REQUEST,
   REGISTER_REQUEST,
@@ -24,7 +25,9 @@ export function* loginSaGa(payload) {
     const res = yield call(login, payload.data)
 
     yield put(loginSuccessAction(res.data))
-    notification.success({ message: 'Mã xác thực được gởi tới email của bạn.', placement: 'bottomLeft' })
+
+    setAccessToken(res.data)
+    history.push('/')
   } catch (error) {
     yield put(handleErrorAction(error))
   }

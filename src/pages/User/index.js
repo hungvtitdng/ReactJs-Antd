@@ -15,6 +15,7 @@ import saga from '../../store/modules/user/saga'
 import reducer from '../../store/modules/user/reducer'
 import * as selectors from '../../store/modules/user/selectors'
 import * as userActions from '../../store/modules/user/actions'
+import Content from '../../components/Layout/Content'
 
 const key = 'user'
 const UserPage = ({ t, userActionsProp, list, loading }) => {
@@ -64,19 +65,16 @@ const UserPage = ({ t, userActionsProp, list, loading }) => {
   ]
 
   return (
-    <div className="bg-white mt-4">
-      <Title name="User list" />
-      <PageHeader
-        title={t('user-list')}
-        extra={<BtnCreate prefix="users" />}
-      />
-
+    <Content
+      title="User list"
+      extra={<BtnCreate prefix="users" />}
+    >
       <TableComponent
         loading={loading}
         columns={columns}
         data={list}
       />
-    </div>
+    </Content>
   )
 }
 
