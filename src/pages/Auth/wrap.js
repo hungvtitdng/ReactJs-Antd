@@ -1,7 +1,7 @@
 import React from 'react'
 import { Form } from 'antd'
 import Title from '../../components/Title'
-import Flag from '../../components/Layout/flags'
+import Flag from '../../components/Layout/Flags'
 
 const WrapAuth = ({ children, title, onFinish, widthDefault, ...props }) => (
   <>
